@@ -61,3 +61,16 @@ def fib(n)
         fib(n-1) + fib(n-2)
     end
 end
+# ------------------------------------------------------------------------------
+
+# Reverse a number without using built in methods like .reverse
+
+def reverse(num)
+    reverse = 0
+    while num > 0
+        last_num = num % 10
+        reverse = (reverse * 10) + last_num
+        num = num / 10
+    end
+    return reverse
+end
