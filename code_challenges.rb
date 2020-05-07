@@ -97,3 +97,26 @@ Input: 120
 Output: 21
 Note:
 Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+
+# ------------------------------------------------------------------------------
+
+# Given two binary trees, write a function to check if they are the same or not.
+#
+# Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
+
+
+def is_same_tree(p, q)
+    array_p = [p.val, p.left, p.right]
+    array_q = [q.val, q.left, q.right]
+
+    arg1 = array_p.each do |a|
+        array_q.each do |b|
+            if a == b
+                return true
+            else
+                return false
+            end
+        end
+    end
+    arg1
+end
