@@ -120,3 +120,15 @@ def is_same_tree(p, q)
     end
     arg1
 end
+
+# You will be given an array of integers whose elements have both a negative and a positive value, except for one integer that is either only negative or only positive. Your task will be to find that integer.
+
+def solve(arr)
+  answer = "Every num has a match."
+  arr.each do |num|
+    if !arr.include?(num * -1)
+      answer = num
+    end
+  end
+  puts answer
+end
