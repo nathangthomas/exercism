@@ -130,5 +130,5 @@ def solve(arr)
       answer = num
     end
   end
-  puts answer
+  answer
 end
