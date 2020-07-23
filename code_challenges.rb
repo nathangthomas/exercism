@@ -142,3 +142,16 @@ def nb_year(p0, percent, aug, p)
   end
   p years
 end
+
+#Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+def fake_bin(s)
+  nums = s.split('')
+  outcome = nums.map do |num|
+    if num.to_i >= 5
+      num = 1
+    else
+      num = 0
+    end
+  end
+  outcome.join()
+end
