@@ -21,3 +21,22 @@ public class Main {
 }
 
 // PLUNGE CUT METHOD HINGE CALCULATOR
+
+public class Main {
+  public static double hingeWidth(double dbh){
+    double hw = dbh*0.10;
+    return hw;
+  }
+  public static double hingeLength(double dbh){
+      double hl = dbh*0.80;
+      return hl;
+  }
+
+  public static String calculate(double dbh) {
+    return(String.format("Hinge Width: %s inches \nHinge Length: %s inches", hingeWidth(dbh), hingeLength(dbh)));
+  }
+    public static void main(String[] args) {
+    calculate(22f);
+    System.out.println(calculate(22f));
+  }
+}
