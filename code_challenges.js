@@ -27,3 +27,27 @@ var twoSum = function(nums, target) {
 };
 
 // -----------------------------------------------------------------------------
+
+
+// CHECK AGE // CALCULATE AGE
+
+function checkAge(birthY, currentY) {
+  age = calculateAge(birthY, currentY);
+
+  if (age < 18) {
+    console.log(`Access Denied —— You are only ${age}.`);
+  } else if (age >= 18){
+    console.log (`Access Granted! —— Age: ${age}`);
+  } else {
+    console.log("Your age cannot be accurately determined. Please try again.");
+  };
+}
+
+
+function calculateAge(birthY, currentY) {
+  age = currentY - birthY;
+  return age;
+};
+
+checkAge(1986, 2020);
+checkAge(2005, 2020);
