@@ -21,7 +21,6 @@ public class Main {
 }
 
 // PLUNGE CUT METHOD HINGE CALCULATOR
-
 public class Main {
   public static double hingeWidth(double dbh){
     double hw = dbh*0.10;
@@ -38,5 +37,31 @@ public class Main {
     public static void main(String[] args) {
     calculate(22f);
     System.out.println(calculate(22f));
+  }
+}
+
+// CHECK AGE --- CALCULATE AGE
+
+class Main {
+  static int calculateAge(int birthY, int currentY){
+    int age = currentY - birthY;
+    return age;
+  }
+
+  static void checkAge(int birthY, int currentY){
+    int age = calculateAge(birthY, currentY);
+    if (age < 18){
+      System.out.println(age + " —— Access denied —— You are not old enough.");
+    } else {
+      System.out.println(age + " —— Access granted!");
+    }
+  }
+
+  public static void main(String[] args){
+    checkAge(1956, 2020);
+    checkAge(1986, 2020);
+    checkAge(1988, 2020);
+    checkAge (2010, 2020);
+    checkAge(2005, 2020);
   }
 }
