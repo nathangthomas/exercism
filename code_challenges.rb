@@ -155,3 +155,24 @@ def fake_bin(s)
   end
   outcome.join()
 end
+
+# OldEnough
+def oldEnough(birth, current)
+  age = calcAge(birth, current)
+  if age < 18
+    p "Access Denied"
+  elsif age >= 18
+    p "Access Granted"
+  else
+    p "Acess Pending"
+  end
+end
+
+def calcAge(birth, current)
+  age = current - birth
+  return age
+end
+
+
+oldEnough(1986, 2020)
+oldEnough(2005, 2020)
